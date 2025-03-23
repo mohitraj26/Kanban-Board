@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #1f1f1f, #2a2a2a); /* Gradient background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.Project-title {
+    height: 5vh;
+    font-size: large;
+    color: #00ffcc; /* Futuristic color */
+    text-align: center; /* Center the title */
+    flex-grow: 1; /* Allow title to take available space */
+}
+
+.add-board-btn {
+    background-color: #00ffcc; /* Button color */
+    color: #121212; /* Text color for button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s; /* Smooth transition */
+}
+
+.add-board-btn:hover {
+    background-color: #00cc99; /* Darker shade on hover */
+}
+
+.containers {
+    display: flex;
+    gap: 10px;
+    padding: 10px 10px;
+}
+
+.container {
+    border: 1px solid #444; /* Darker border */
+    border-radius: 8px;
+    height: 80vh;
+    width: 100%;
+    padding: 15px;
+    background: #1e1e1e; /* Darker container background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.container-title {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    color: #00ffcc; 
+}
+
+.tasks {
+    height: 65vh;
+    border: 1px solid #444; /* Darker border */
+    border-radius: 8px;
+    padding: 10px;
+    background: #2a2a2a; /* Darker background for tasks */
+    margin-top: 5px;
+    overflow-y: scroll;
+}
+
+.task {
+    border: 1px solid #555; /* Slightly lighter border */
+    border-radius: 4px;
+    margin-top: 9px;
+    padding: 10px;
+    background: #333; /* Dark background for tasks */
+    transition: background 0.3s; /* Smooth transition */
+}
+
+.task:hover {
+    background: #444; /* Lighter background on hover */
+}
+
+.container-bottom {
+    border: 1px solid #444; /* Darker border */
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 9px;
+    display: flex;
+    background: #2a2a2a; /* Darker background */
+}
+
+button {
+    text-decoration: none;
+    background-color: #00ffcc; /* Base button color */
+    color: #121212; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 7px 8px; /* Padding for button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+button:hover {
+    background-color: #00cc99; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+button:active {
+    transform: translateY(0); /* Reset lift effect when clicked */
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modalContainer.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    color: #e0e0e0;
+}
+
+.modalTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    color: #00ffcc;
+    margin-bottom: 15px;
+}
+
+.modalTitle button {
+    background: transparent;
+    border: none;
+    color: #e0e0e0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modalTitle button:hover {
+    color: #ff4d4d;
+}
+
+.modal input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #333;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.modal .modalBottom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal .modalBottom button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #00ffcc;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal .modalBottom button:hover {
+    background-color: #00cc99;
+    transform: translateY(-2px);
+}
+
+.modal .modalBottom button:active {
+    transform: translateY(0);
+}

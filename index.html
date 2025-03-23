@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="body">
+        <header>
+            <div class="Project-title">
+                <h1>Kanban Board</h1>
+            </div>
+            <button id="add-board-btn"> Add Board</button>
+        </header>
+        <div class="divider"></div>
+        <div class="modalContainer">
+            <div class="modal">
+                <div class="modalTitle">Title
+                    <button class="modalCancelBtn">X</button>
+                </div>
+                <label>Title</label>
+                <input id="inputField" type="text" placeholder="Enter the title of Board ">
+                <div class="maodalBottom">
+                    <button id="save-btn">Save</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="containers">
+            <div class="container">
+                <div class="container-title">
+                    <h3>To Do</h3>
+                </div>
+                <div id='todo-tasks' class="tasks">
+                </div>
+                <div class="container-bottom">
+                    <button id="add-todo-btn" data-target="todoTasks" class="add-btn">Add Items</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container-title">
+                    <h3>In Progress</h3>
+                </div>
+                <div id='progress-tasks' class="tasks">
+                </div>
+                <div class="container-bottom">
+                    <button id="add-progress-btn" data-target="progressTasks" class="add-btn">Add Items</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container-title">
+                    <h3>Done</h3>
+                </div>
+                <div id="done-tasks" class="tasks">
+                </div>
+                <div class="container-bottom">
+                    <button id="add-done-btn" data-target="doneTasks" class="add-btn">Add Items</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
